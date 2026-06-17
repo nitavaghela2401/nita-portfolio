@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nita AI Marketing - Nita Nikul Vaghela. AI Powered Social Media Marketer, Digital Marketing Specialist, and AI Content Creator.">
+  <title>Nita AI Marketing | AI Powered Portfolio</title>
+  
+  <!-- Poppins & Montserrat Google Fonts -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Glow Orbs -->
+  <div class="glow-orb orb-left"></div>
+  <div class="glow-orb orb-right"></div>
+  <div class="glow-orb orb-center"></div>
+
+  <!-- Header Floating Navigation -->
+  <header id="header">
+    <div class="nav-container">
+      <a href="#hero" class="logo">
+        <img src="logo.png" alt="Nita AI Marketing Logo" class="logo-img">
+        Nita AI Marketing
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#tools" class="nav-link">AI Tools</a></li>
+        <li><a href="#portfolio" class="nav-link">Case Studies</a></li>
+        <li><a href="#gallery" class="nav-link">Creative Work</a></li>
+        <li><a href="#why-choose-me" class="nav-link">Why Me</a></li>
+        <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="#contact" class="btn btn-primary" style="padding: 8px 18px; font-size: 0.82rem;">Get Started</a></li>
+      </ul>
+      <button class="hamburger" id="hamburgerMenu" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- 1. Hero Section -->
+  <section id="hero" class="hero">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <i data-lucide="sparkles" style="width: 14px;"></i>
+          Nita AI Marketing
+        </div>
+        <h1 class="hero-title">
+          Helping Businesses Grow with <span class="gradient-text-electric">AI-Powered Marketing</span> Solutions
+        </h1>
+        <p class="hero-subtitle">
+          I create AI-driven social media strategies, engaging content, and digital marketing solutions that help brands build a stronger online presence.
+        </p>
+        <div class="hero-ctas">
+          <a href="#portfolio" class="btn btn-primary">
+            View My Work
+            <i data-lucide="arrow-up-right" style="width: 16px;"></i>
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            Contact Me
+            <i data-lucide="message-square" style="width: 16px;"></i>
+          </a>
+        </div>
+      </div>
+      
+      <div class="hero-visuals">
+        <!-- Floating KPI badges -->
+        <div class="floating-kpi-badge badge-social" style="top: -20px; left: -10px;">
+          <div class="contact-info-icon-box" style="width: 32px; height: 32px; border-radius: 6px;">
+            <i data-lucide="trending-up" style="width: 16px;"></i>
+          </div>
+          <div class="badge-info-column">
+            <span class="kpi-lbl">SMM Growth</span>
+            <span class="kpi-val">+240% QoQ</span>
+          </div>
+        </div>
+
+        <div class="floating-kpi-badge badge-ads" style="bottom: -20px; right: -10px;">
+          <div class="contact-info-icon-box" style="width: 32px; height: 32px; border-radius: 6px;">
+            <i data-lucide="cpu" style="width: 16px;"></i>
+          </div>
+          <div class="badge-info-column">
+            <span class="kpi-lbl">AI Ad ROAS</span>
+            <span class="kpi-val">4.2x Avg</span>
+          </div>
+        </div>
+
+        <!-- Glow decoration ring -->
+        <div class="glow-decoration-circle" style="width: 440px; height: 440px;"></div>
+
+        <!-- Profile Frame -->
+        <div class="profile-border-frame" style="width: 240px; height: 300px;">
+          <img src="profile.jpg" alt="Nita Nikul Vaghela - AI Marketer" class="profile-img-val">
+        </div>
+
+        <!-- YouTube Video Frame with Custom Cover -->
+        <div class="video-ad-frame" id="heroVideoContainer" style="width: 320px; height: 200px; border: 1px solid var(--border-color); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-premium); background: var(--bg-secondary); position: relative; z-index: 2; cursor: pointer;" onclick="playHeroVideo()">
+          <!-- Custom Cover Image -->
+          <img src="https://img.youtube.com/vi/o5FyckqbjZI/maxresdefault.jpg" id="heroVideoCover" alt="Latest Campaign Video" style="width: 100%; height: 100%; object-fit: cover; transition: var(--transition-smooth); position: absolute; top: 0; left: 0; z-index: 3;">
+          <!-- Custom Play Button Overlay -->
+          <div id="heroPlayBtn" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 4; width: 52px; height: 52px; border-radius: 50%; background: var(--accent-color); color: var(--bg-primary); display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-cyan); transition: var(--transition-fast);">
+            <i data-lucide="play" style="width: 20px; height: 20px; margin-left: 2px;"></i>
+          </div>
+          <!-- Real Iframe Container -->
+          <div id="heroVideoIframeContainer" style="width: 100%; height: 100%; display: none;">
+            <!-- Will load dynamically on click -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. About Me Section -->
+  <section id="about">
+    <div class="about-grid">
+      <div class="about-visual" style="justify-content: center; display: flex;">
+        <div class="profile-border-frame" style="width: 280px; height: 340px; border-color: rgba(255,255,255,0.05);">
+          <!-- Nita Nikul Vaghela Profile Photo -->
+          <img src="about-profile.png" alt="Nita Nikul Vaghela - AI Powered Marketer" class="profile-img-val">
+        </div>
+      </div>
+      
+      <div class="about-content">
+        <span class="section-tag">Strategist Profile</span>
+        <h2 class="section-title" style="margin-bottom: 20px;">Synthesizing AI With Marketing Data</h2>
+        <p class="about-intro-txt">
+          Hi, I am Nita Nikul Vaghela, an AI Powered Social Media Marketer and Digital Marketing Specialist.
+        </p>
+        <p class="about-detailed-p">
+          I help businesses improve their online presence through AI tools, creative content, social media strategy, and innovative marketing solutions. Combining first-hand consumer psychology insights with machine learning content automation, I deploy campaigns that capture attention, build trust, and multiply customer conversions.
+        </p>
+        
+        <h3 class="skills-title">Core Skills Highlight</h3>
+        <div class="skills-badges-wrap">
+          <span class="skill-tag">AI Marketing</span>
+          <span class="skill-tag">Social Media Strategy</span>
+          <span class="skill-tag">Content Creation</span>
+          <span class="skill-tag">AI Video Creation</span>
+          <span class="skill-tag">Brand Growth</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Services Section -->
+  <section id="services">
+    <div class="section-header">
+      <span class="section-tag">Our Services</span>
+      <h2 class="section-title">Growth Frameworks Built For Conversion</h2>
+    </div>
+    
+    <div class="services-grid">
+      <!-- Service 1 -->
+      <div class="service-card">
+        <div class="service-icon-box">
+          <i data-lucide="share-2" style="width: 24px; height: 24px;"></i>
+        </div>
+        <h3 class="service-title">AI Social Media Marketing</h3>
+        <p class="service-desc">
+          AI-powered content strategy, data-driven social media management, and localized organic brand growth solutions.
+        </p>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="service-card">
+        <div class="service-icon-box">
+          <i data-lucide="clapperboard" style="width: 24px; height: 24px;"></i>
+        </div>
+        <h3 class="service-title">AI Content Creation</h3>
+        <p class="service-desc">
+          High-velocity generation of professional images, engaging short reels, product videos, copy captions, and ad creatives.
+        </p>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="service-card">
+        <div class="service-icon-box">
+          <i data-lucide="award" style="width: 24px; height: 24px;"></i>
+        </div>
+        <h3 class="service-title">Social Media Branding</h3>
+        <p class="service-desc">
+          Professional brand identity creation, cohesive color palettes, visual templates, organic campaigns, and ad layouts.
+        </p>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="service-card">
+        <div class="service-icon-box">
+          <i data-lucide="laptop" style="width: 24px; height: 24px;"></i>
+        </div>
+        <h3 class="service-title">Digital Marketing Solutions</h3>
+        <p class="service-desc">
+          SEO optimization basics, high-intent blogging, semantic keyword research, and google listing visibility improvements.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. AI Tools Section -->
+  <section id="tools">
+    <div class="section-header" style="text-align: center; margin: 0 auto 50px auto;">
+      <span class="section-tag">AI Tech Stack</span>
+      <h2 class="section-title">Leveraging Next-Gen Creative Systems</h2>
+      <p style="color: var(--text-slate); margin-top: 10px;">We integrate the best AI tools to multiply output volume by 10x while maintaining premium branding aesthetics.</p>
+    </div>
+    
+    <div class="tools-grid">
+      <!-- Tool 1 -->
+      <div class="tool-card">
+        <div class="tool-icon-wrapper">
+          <i data-lucide="message-square"></i>
+        </div>
+        <span class="tool-name">ChatGPT</span>
+        <span class="tool-status-badge">Copywriting</span>
+      </div>
+
+      <!-- Tool 2 -->
+      <div class="tool-card">
+        <div class="tool-icon-wrapper">
+          <i data-lucide="brain"></i>
+        </div>
+        <span class="tool-name">Gemini AI</span>
+        <span class="tool-status-badge">Strategy</span>
+      </div>
+
+      <!-- Tool 3 -->
+      <div class="tool-card">
+        <div class="tool-icon-wrapper">
+          <i data-lucide="brush"></i>
+        </div>
+        <span class="tool-name">Canva</span>
+        <span class="tool-status-badge">Visual Kits</span>
+      </div>
+
+      <!-- Tool 4 -->
+      <div class="tool-card">
+        <div class="tool-icon-wrapper">
+          <i data-lucide="video"></i>
+        </div>
+        <span class="tool-name">CapCut</span>
+        <span class="tool-status-badge">Reels Edits</span>
+      </div>
+
+      <!-- Tool 5 -->
+      <div class="tool-card">
+        <div class="tool-icon-wrapper">
+          <i data-lucide="image"></i>
+        </div>
+        <span class="tool-name">AI Image Tools</span>
+        <span class="tool-status-badge">Generations</span>
+      </div>
+
+      <!-- Tool 6 -->
+      <div class="tool-card">
+        <div class="tool-icon-wrapper">
+          <i data-lucide="film"></i>
+        </div>
+        <span class="tool-name">AI Video Tools</span>
+        <span class="tool-status-badge">Ad Scripts</span>
+      </div>
+
+      <!-- Tool 7 -->
+      <div class="tool-card">
+        <div class="tool-icon-wrapper">
+          <i data-lucide="workflow"></i>
+        </div>
+        <span class="tool-name">Flow AI</span>
+        <span class="tool-status-badge">Automation</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Portfolio / Case Study Section -->
+  <section id="portfolio">
+    <div class="section-header">
+      <span class="section-tag">Case Studies</span>
+      <h2 class="section-title">Selected Brand Scale Showcases</h2>
+    </div>
+    
+    <div class="portfolio-grid">
+      <!-- Project 1 -->
+      <div class="project-card">
+        <div class="project-media-box">
+          <span class="project-niche-badge">Travel Industry</span>
+          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 50%; height: 50%; opacity: 0.85;">
+            <rect x="20" y="20" width="60" height="60" rx="10" fill="#12182d" stroke="var(--accent-color)" stroke-width="2" />
+            <path d="M40 45 L50 35 L60 45 M50 35 V65" stroke="var(--accent-color)" stroke-width="3" stroke-linecap="round" />
+            <circle cx="50" cy="50" r="15" stroke="rgba(255, 255, 255, 0.05)" />
+          </svg>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Aapka Holidays Ltd.</h3>
+          <p class="project-desc">Designed high-converting travel posts, tourist attraction carousels, and seasonal campaign strategies boosting packages bookings.</p>
+          <button class="project-action-btn" onclick="openCaseStudyModal('aapka')">
+            Read Case Study
+            <i data-lucide="eye" style="width: 14px;"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <div class="project-media-box">
+          <span class="project-niche-badge">FMCG Retail</span>
+          <img src="work-pizza.jpg" alt="Pizza Delight Campaign" class="project-img-display">
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Shethwala & Sons</h3>
+          <p class="project-desc">Created scroll-stopping food aesthetics, festival promo ads, and local distribution brand placements.</p>
+          <button class="project-action-btn" onclick="openCaseStudyModal('shethwala')">
+            Read Case Study
+            <i data-lucide="eye" style="width: 14px;"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card">
+        <div class="project-media-box">
+          <span class="project-niche-badge">Healthcare Retail</span>
+          <img src="work-suvidha.jpg" alt="Suvidha Chemist Health Post" class="project-img-display">
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Suvidha Chemist</h3>
+          <p class="project-desc">Developed localized health awareness posts, seasonal wellness tips, and Google Maps pharmacy local SEO tagging.</p>
+          <button class="project-action-btn" onclick="openCaseStudyModal('suvidha')">
+            Read Case Study
+            <i data-lucide="eye" style="width: 14px;"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="project-card">
+        <div class="project-media-box">
+          <span class="project-niche-badge">Beauty Industry</span>
+          <img src="work-beauty.jpg" alt="Elegance Beauty Salon" class="project-img-display">
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Elegance Beauty Salon</h3>
+          <p class="project-desc">Structured luxury brand aesthetics, salon services showcase carousels, and local discount campaign layouts.</p>
+          <button class="project-action-btn" onclick="openCaseStudyModal('elegance')">
+            Read Case Study
+            <i data-lucide="eye" style="width: 14px;"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Case Study Modal -->
+  <div class="modal" id="caseStudyModal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeCaseStudyModal()">&times;</button>
+      <div class="modal-body" id="modalCaseStudyBody">
+        <!-- Content Injected Dynamically by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. My Creative Work Section -->
+  <section id="gallery">
+    <div class="section-header">
+      <span class="section-tag">Creative Works</span>
+      <h2 class="section-title">Aesthetic Campaign Portfolios</h2>
+    </div>
+    
+    <div class="gallery-controls">
+      <button class="gallery-filter-btn active" onclick="filterGallery('all', this)">All Works</button>
+      <button class="gallery-filter-btn" onclick="filterGallery('posts', this)">Instagram Posts</button>
+      <button class="gallery-filter-btn" onclick="filterGallery('reels', this)">Reels</button>
+      <button class="gallery-filter-btn" onclick="filterGallery('ai', this)">AI Generated</button>
+      <button class="gallery-filter-btn" onclick="filterGallery('festivals', this)">Festival Campaigns</button>
+      <button class="gallery-filter-btn" onclick="filterGallery('promos', this)">Product Promotions</button>
+      <button class="gallery-filter-btn" onclick="filterGallery('branding', this)">Brand Designs</button>
+    </div>
+    
+    <div class="gallery-grid">
+      <!-- Pizza Ad (Posts, Promos) -->
+      <div class="gallery-item" data-category="posts promos">
+        <img src="work-pizza.jpg" alt="Pizza Delight Creative" class="gallery-img">
+        <div class="gallery-overlay">
+          <span class="gallery-item-title">Cheesy Bite Pizza Creative</span>
+          <span class="gallery-item-niche">Instagram Post / Product Promo</span>
+        </div>
+      </div>
+
+      <!-- Suvidha Health Post (Posts, Festivals) -->
+      <div class="gallery-item" data-category="posts festivals">
+        <img src="work-suvidha.jpg" alt="Suvidha Chemist Health Post" class="gallery-img">
+        <div class="gallery-overlay">
+          <span class="gallery-item-title">Summer Health Awareness</span>
+          <span class="gallery-item-niche">Instagram Post / Healthcare Campaign</span>
+        </div>
+      </div>
+
+      <!-- Glow Cream Ad (Promos, Branding, AI) -->
+      <div class="gallery-item" data-category="promos branding ai">
+        <img src="work-beauty.jpg" alt="Glow Radiance Beauty Ad" class="gallery-img">
+        <div class="gallery-overlay">
+          <span class="gallery-item-title">Glow Radiance Cream Ad</span>
+          <span class="gallery-item-niche">AI Generated Image / Brand Design</span>
+        </div>
+      </div>
+
+      <!-- Card 4: Confident Businesswoman (Reels, Branding, AI) -->
+      <div class="gallery-item" data-category="reels branding ai">
+        <video autoplay loop muted playsinline class="gallery-img">
+          <source src="Confident_businesswoman_walks.mp4" type="video/mp4">
+        </video>
+        <div class="gallery-overlay">
+          <span class="gallery-item-title">Confident Businesswoman Promo</span>
+          <span class="gallery-item-niche">Reels / Personal Branding</span>
+        </div>
+      </div>
+
+      <!-- Card 5: Real Estate I (Reels, Promos, Branding) -->
+      <div class="gallery-item" data-category="reels promos branding">
+        <video autoplay loop muted playsinline class="gallery-img">
+          <source src="Luxreal_20260530_2a38818e0c252afc8a01fe4f54d308f7.mp4" type="video/mp4">
+        </video>
+        <div class="gallery-overlay">
+          <span class="gallery-item-title">Luxury Property Showcase I</span>
+          <span class="gallery-item-niche">Reels / Property Marketing</span>
+        </div>
+      </div>
+
+      <!-- Card 6: Real Estate II (Reels, Promos) -->
+      <div class="gallery-item" data-category="reels promos">
+        <video autoplay loop muted playsinline class="gallery-img">
+          <source src="Luxreal_20260530_cee6af50048a97de63f8c4bba4217995.mp4" type="video/mp4">
+        </video>
+        <div class="gallery-overlay">
+          <span class="gallery-item-title">Luxury Property Showcase II</span>
+          <span class="gallery-item-niche">Reels / Property Promotion</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Why Choose Me Section -->
+  <section id="why-choose-me">
+    <div class="section-header">
+      <span class="section-tag">Value Proposition</span>
+      <h2 class="section-title">Driving ROI Through Smarter Marketing</h2>
+    </div>
+    
+    <div class="why-grid">
+      <!-- Item 1 -->
+      <div class="why-card">
+        <div class="why-check-circle">
+          <i data-lucide="check" style="width: 16px;"></i>
+        </div>
+        <div class="why-info">
+          <h3 class="why-title">AI-Powered Approach</h3>
+          <p class="why-desc">We leverage generative AI to automate visual assets production, lowering costs by up to 60%.</p>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="why-card">
+        <div class="why-check-circle">
+          <i data-lucide="check" style="width: 16px;"></i>
+        </div>
+        <div class="why-info">
+          <h3 class="why-title">Creative & Strategic Thinking</h3>
+          <p class="why-desc">Every piece of creative is backed by localized target analytics to build customer trust.</p>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="why-card">
+        <div class="why-check-circle">
+          <i data-lucide="check" style="width: 16px;"></i>
+        </div>
+        <div class="why-info">
+          <h3 class="why-title">Industry-Based Solutions</h3>
+          <p class="why-desc">Tailored blueprints for clinics, restaurants, fashion brands, real estate, and professional coaches.</p>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="why-card">
+        <div class="why-check-circle">
+          <i data-lucide="check" style="width: 16px;"></i>
+        </div>
+        <div class="why-info">
+          <h3 class="why-title">Modern Tools Expertise</h3>
+          <p class="why-desc">Expert application of ChatGPT, Midjourney, Canva, and automation algorithms.</p>
+        </div>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="why-card">
+        <div class="why-check-circle">
+          <i data-lucide="check" style="width: 16px;"></i>
+        </div>
+        <div class="why-info">
+          <h3 class="why-title">Focus on Brand Growth</h3>
+          <p class="why-desc">We focus on metrics that matter: map direction clicks, message inquiries, leads, and sales.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Testimonial Section -->
+  <section id="testimonials">
+    <div class="section-header" style="text-align: center; margin: 0 auto 50px auto;">
+      <span class="section-tag">Reviews</span>
+      <h2 class="section-title">Client Success Stories</h2>
+    </div>
+    
+    <div class="testimonial-wrapper">
+      <div class="testimonial-slide-track" id="testimonialTrack">
+        <!-- Slide 1 -->
+        <div class="testimonial-slide">
+          <div class="testimonial-card">
+            <div class="rating-row">
+              <i data-lucide="star" style="fill: var(--accent-color); stroke: none; width: 14px;"></i>
+              <i data-lucide="star" style="fill: var(--accent-color); stroke: none; width: 14px;"></i>
+              <i data-lucide="star" style="fill: var(--accent-color); stroke: none; width: 14px;"></i>
+              <i data-lucide="star" style="fill: var(--accent-color); stroke: none; width: 14px;"></i>
+              <i data-lucide="star" style="fill: var(--accent-color); stroke: none; width: 14px;"></i>
+            </div>
+            <p class="testimonial-quote">
+              "Nita completely transformed our organic social media marketing. Her reels ideas are super creative and they hit exactly the right pain points of our audience. Within 3 months, our organic inquiries increased dramatically!"
+            </p>
+            <div class="testimonial-client-row">
+              <div class="client-meta-box">
+                <div class="client-avatar-placeholder">
+                  <i data-lucide="user" style="width: 18px;"></i>
+                </div>
+                <div class="client-info">
+                  <span class="client-name">Rajesh Mehta</span>
+                  <span class="client-business">Founder, SweetTreats FMCG</span>
+                </div>
+              </div>
+              <span class="growth-badge">+180% Enquiries</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="testimonial-slide">
+          <div class="testimonial-card">
+            <div class="rating-row">
+              <i data-lucide="star" style="fill: var(--accent-color); stroke: none; width: 14px;"></i>
+              <i data-lucide="star" style="fill: var(--accent-color); stroke: none; width: 14px;"></i>
+              <i data-lucide="star" style="fill: var(--accent-color); stroke: none; width: 14px;"></i>
+              <i data-lucide="star" style="fill: var(--accent-color); stroke: none; width: 14px;"></i>
+              <i data-lucide="star" style="fill: var(--accent-color); stroke: none; width: 14px;"></i>
+            </div>
+            <p class="testimonial-quote">
+              "Our local store setup needed a serious digital lift. Nita optimized our Google Profile and set up laser-focused local Meta Ads. We literally had people coming in citing our social ads within the first 15 days. Unbelievable results!"
+            </p>
+            <div class="testimonial-client-row">
+              <div class="client-meta-box">
+                <div class="client-avatar-placeholder">
+                  <i data-lucide="user" style="width: 18px;"></i>
+                </div>
+                <div class="client-info">
+                  <span class="client-name">Dr. Sandeep Patel</span>
+                  <span class="client-business">Managing Director, Suvidha Retail</span>
+                </div>
+              </div>
+              <span class="growth-badge">+40% Walk-ins</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="testimonial-slide">
+          <div class="testimonial-card">
+            <div class="rating-row">
+              <i data-lucide="star" style="fill: var(--accent-color); stroke: none; width: 14px;"></i>
+              <i data-lucide="star" style="fill: var(--accent-color); stroke: none; width: 14px;"></i>
+              <i data-lucide="star" style="fill: var(--accent-color); stroke: none; width: 14px;"></i>
+              <i data-lucide="star" style="fill: var(--accent-color); stroke: none; width: 14px;"></i>
+              <i data-lucide="star" style="fill: var(--accent-color); stroke: none; width: 14px;"></i>
+            </div>
+            <p class="testimonial-quote">
+              "Working with Nita to integrate AI product video clips into our marketing calendar was a total game-changer. The speed at which she script-drafts and outputs high-quality ads saved us tons of time and pushed our conversion rates higher."
+            </p>
+            <div class="testimonial-client-row">
+              <div class="client-meta-box">
+                <div class="client-avatar-placeholder">
+                  <i data-lucide="user" style="width: 18px;"></i>
+                </div>
+                <div class="client-info">
+                  <span class="client-name">Priya Shah</span>
+                  <span class="client-business">CMO, StyleCraft E-comm</span>
+                </div>
+              </div>
+              <span class="growth-badge">4.2x ROAS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls indicators -->
+      <div class="testimonial-controls">
+        <button class="testimonial-arrow" onclick="slidePrev()" aria-label="Previous Review">
+          <i data-lucide="chevron-left"></i>
+        </button>
+        <div class="testimonial-dots" id="testimonialDots">
+          <span class="testimonial-dot active" onclick="goToSlide(0)"></span>
+          <span class="testimonial-dot" onclick="goToSlide(1)"></span>
+          <span class="testimonial-dot" onclick="goToSlide(2)"></span>
+        </div>
+        <button class="testimonial-arrow" onclick="slideNext()" aria-label="Next Review">
+          <i data-lucide="chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Contact Section -->
+  <section id="contact">
+    <div class="contact-container">
+      <div class="contact-details-box">
+        <span class="section-tag">Let's Connect</span>
+        <h2 class="section-title" style="margin-bottom: 12px;">Let's Grow Your Brand</h2>
+        <p class="contact-intro-sub">
+          Ready to scale your business online using AI-powered systems? Request a customized audit proposal.
+        </p>
+        
+        <div class="contact-info-list">
+          <!-- Owner -->
+          <div class="contact-info-item">
+            <div class="contact-info-icon-box">
+              <i data-lucide="user"></i>
+            </div>
+            <div class="contact-info-content">
+              <span class="contact-info-lbl">Strategist</span>
+              <span class="contact-info-val">Nita Nikul Vaghela</span>
+            </div>
+          </div>
+
+          <!-- Phone -->
+          <div class="contact-info-item">
+            <div class="contact-info-icon-box">
+              <i data-lucide="phone"></i>
+            </div>
+            <div class="contact-info-content">
+              <span class="contact-info-lbl">Call / WhatsApp</span>
+              <a href="tel:+918780284298" class="contact-info-val" style="color: var(--accent-color);">+91 8780284298</a>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="contact-info-item">
+            <div class="contact-info-icon-box">
+              <i data-lucide="mail"></i>
+            </div>
+            <div class="contact-info-content">
+              <span class="contact-info-lbl">Email Address</span>
+              <span class="contact-info-val">nitavaghela2401@gmail.com</span>
+            </div>
+          </div>
+
+          <!-- Site -->
+          <div class="contact-info-item">
+            <div class="contact-info-icon-box">
+              <i data-lucide="globe"></i>
+            </div>
+            <div class="contact-info-content">
+              <span class="contact-info-lbl">Website Domain</span>
+              <a href="https://digitlizenitu.com" target="_blank" class="contact-info-val" style="text-decoration: underline; color: var(--accent-color);">digitlizenitu.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Intake Form -->
+      <div>
+        <form class="contact-form" id="intakeForm" onsubmit="handleFormSubmit(event)">
+          <div class="form-group">
+            <label for="c_name" class="form-label">Full Name</label>
+            <input type="text" id="c_name" class="form-input" placeholder="Your name" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="c_email" class="form-label">Email Address</label>
+            <input type="email" id="c_email" class="form-input" placeholder="you@example.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="c_biz" class="form-label">Business Name</label>
+            <input type="text" id="c_biz" class="form-input" placeholder="Your brand / company" required>
+          </div>
+
+          <div class="form-group">
+            <label for="c_msg" class="form-label">Brief Description of Goals</label>
+            <textarea id="c_msg" class="form-input form-textarea" placeholder="Tell me about your business goals and services needed..." required></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+            Send Proposals Request
+            <i data-lucide="send" style="width: 16px;"></i>
+          </button>
+          
+          <div class="form-success-card" id="formSuccessCard">
+            <i data-lucide="check-circle" style="flex-shrink: 0;"></i>
+            Proposal request submitted! Nita Nikul Vaghela will respond within 12 hours.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. Footer Section -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <span class="footer-brand-title">Nita AI Marketing</span>
+        <span class="footer-tagline">AI-powered creativity. Digital growth. Stronger brands.</span>
+      </div>
+      <div class="footer-copyright">
+        &copy; 2026 Nita AI Marketing. All rights reserved. Managed in Vadodara, Gujarat.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lucide Icon Library -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Main Script -->
+  <script src="app.js"></script>
+</body>
+</html>
