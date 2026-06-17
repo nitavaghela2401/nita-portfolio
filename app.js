@@ -6,6 +6,44 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Set up testimonials slide initial positioning
   updateTestimonialSlider();
+
+  // Lazy-load videos using IntersectionObserver to save mobile bandwidth
+  const lazyVideos = document.querySelectorAll('.lazy-video');
+  if ('IntersectionObserver' in window) {
+    const videoObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        const video = entry.target;
+        const source = video.querySelector('source');
+        if (entry.isIntersecting) {
+          if (source && source.getAttribute('data-src')) {
+            source.src = source.getAttribute('data-src');
+            source.removeAttribute('data-src');
+            video.load();
+          }
+          video.play().catch(err => console.log('Autoplay delayed:', err));
+        } else {
+          video.pause();
+        }
+      });
+    }, {
+      rootMargin: '120px 0px', // Start loading slightly before entering viewport
+      threshold: 0.1
+    });
+
+    lazyVideos.forEach(video => {
+      videoObserver.observe(video);
+    });
+  } else {
+    // Fallback for older browsers
+    lazyVideos.forEach(video => {
+      const source = video.querySelector('source');
+      if (source && source.getAttribute('data-src')) {
+        source.src = source.getAttribute('data-src');
+      }
+      video.load();
+      video.play().catch(err => console.log(err));
+    });
+  }
 });
 
 // Floating Sticky Header scroll effect
