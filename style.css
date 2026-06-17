@@ -352,7 +352,7 @@ header.scrolled {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: center 15%;
   transition: var(--transition-smooth);
 }
 
@@ -665,7 +665,9 @@ header.scrolled {
 .project-img-display {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  background: rgba(6, 9, 20, 0.4);
+  padding: 12px;
   transition: var(--transition-smooth);
 }
 
@@ -934,7 +936,9 @@ header.scrolled {
 .gallery-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  background: rgba(6, 9, 20, 0.4);
+  padding: 12px;
   transition: var(--transition-smooth);
 }
 
@@ -1045,11 +1049,11 @@ header.scrolled {
 .testimonial-slide-track {
   display: flex;
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-  width: 300%;
+  width: 400%;
 }
 
 .testimonial-slide {
-  width: 33.333%;
+  width: 25%;
   padding: 10px;
 }
 

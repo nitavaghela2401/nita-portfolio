@@ -58,12 +58,12 @@ navLinks.forEach(link => {
 
 // Testimonials Carousel Logic
 let currentSlide = 0;
-const totalSlides = 3;
+const totalSlides = 4;
 const testimonialTrack = document.getElementById('testimonialTrack');
 const testimonialDots = document.querySelectorAll('#testimonialDots .testimonial-dot');
 
 function updateTestimonialSlider() {
-  testimonialTrack.style.transform = `translateX(-${currentSlide * 33.333}%)`;
+  testimonialTrack.style.transform = `translateX(-${currentSlide * 25}%)`;
   
   // Update Dot indicators
   testimonialDots.forEach((dot, idx) => {
