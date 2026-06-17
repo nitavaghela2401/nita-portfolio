@@ -162,8 +162,8 @@ const caseStudies = {
   aapka: {
     tag: "Travel Industry",
     title: "Aapka Holidays Ltd. - Content Scaling",
-    img: "logo.png", // Using logo or a custom placeholder SVG inside modal
-    useSVG: true,
+    img: "work-travel.png",
+    useSVG: false,
     description: "Designed conversion-focused social media creatives, tourist package itineraries, and promotional content strategy.",
     challenge: "The client needed to stand out in a crowded travel booking market and capture direct package inquiries rather than relying entirely on third-party aggregators.",
     strategy: "Formulated a weekly content pillar structure focusing on 'hidden gems' destinations. Designed high-contrast Canva carousels detailing pricing options, travel perks, and tourist feedback. Ran organic Instagram optimization loops.",
@@ -201,7 +201,7 @@ const caseStudies = {
   elegance: {
     tag: "Beauty Industry",
     title: "Elegance Beauty Salon - Luxury Branding",
-    img: "work-beauty.jpg",
+    img: "work-salon.png",
     useSVG: false,
     description: "Formulated luxury beauty brand aesthetics, product commercial posts, and localized offer campaigns.",
     challenge: "Competing beauty salons were cutting prices. Elegance Salon needed a high-end visual positioning to charge premium service rates.",
